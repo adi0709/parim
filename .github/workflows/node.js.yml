@@ -1,0 +1,20 @@
+name: Execute Cypress Tests Using Docker Image
+on: [push]
+
+jobs:
+  cypress-Tests:
+    name: Run on Chrome 97
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: install CI
+        run: npm ci
+      - name: Install cypress and verify
+        run: npm install
+      - name: Run Cypress Tests
+        run: npm run tests
+        continue-on-error: false
+        
