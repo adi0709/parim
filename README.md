@@ -16,6 +16,7 @@ This repo contains a set of Automation tests for the ToDo Application.
     `npm install`
     or
     `npm i`
-
-5.  Execute the tests by running the following commands  
+5.  Make sure to add the start server and test plugin
+    `npm install --save-dev start-server-and-test`
+6.  Execute the tests by running the following commands  
     `npm run tests`
